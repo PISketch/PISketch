@@ -7,11 +7,12 @@ item weights than the method.
 ## About this repo
 - `data`: generate synthetic datasets for tests, each item in a dataset is 16 bytes: 8 bytes timestamp (meaningless, to conform the CAIDA format), 8 bytes ID.
   - `compile.sh`: 5 arguments after `./sim.out`: number of PI flows, number of all flows, window size, numerator of alpha, denominator of alpha.
+  - `GenSimData.cpp`: codes of generating Zipf background flows and PI flows and synthesizing them together.
 - `src`: contains codes of data structures and parameters.
 - `trace`: another set of codes of generating synthetic datasets (not used in the paper).
 - `compile.sh`: 6 arguments after `./demo.out`: number of buckets, number of cells per bucket, persistency threshold, numerator of infrequency threshold, denominator of infrequency threshold, window size.
-- `demo.cpp`: main codes of marking the PI flows, taking the tests and calculating the metircs.
-- `Detector.h`: main codes of data structures and operations of PI sketch.
+- `demo.cpp`: codes of marking the PI flows, taking the tests and calculating the metircs.
+- `Detector.h`: codes of data structures and operations of PI sketch.
 
 ## Requirements
 - g++
